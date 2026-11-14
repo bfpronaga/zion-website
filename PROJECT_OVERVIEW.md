@@ -188,7 +188,7 @@ Based on the site exploration:
 
 ---
 
-### Option 2: Modern Headless CMS (Strapi + Next.js)
+### Option 2: 日本製 Headless CMS (microCMS / Newt + Next.js) ⭐ 推奨
 **Pros:**
 - Modern, fast performance
 - Complete control over design
@@ -296,27 +296,39 @@ Based on the site exploration:
 
 **For Better Performance & Modern Experience:**
 
+**推奨: microCMS** 🥇
+
 **Tech Stack:**
-- **Frontend:** Next.js 14+ with App Router
-- **CMS:** Strapi or Sanity
-- **Hosting:** Vercel (frontend) + Railway (backend)
+- **Frontend:** Next.js 14 with App Router
+- **CMS:** microCMS (日本製、日本語対応)
+- **Hosting:** Vercel (frontend)
 - **Email:** SendGrid or AWS SES
 - **Video:** YouTube API integration
+- **Image:** microCMS Image Optimization API
 
 **Benefits:**
-- Lightning-fast performance
-- Modern, smooth user experience
-- Better SEO
-- Scalable for future growth
-- More control over features
+- ✅ 日本語管理画面・ドキュメント完備
+- ✅ 非技術者でも使いやすい
+- ✅ 強力な画像最適化API
+- ✅ Lightning-fast performance
+- ✅ 導入実績7,000社以上（安心感）
+- ✅ 充実したコミュニティ・サポート
+- ✅ Next.js公式SDK
 
-**Drawbacks:**
-- Higher initial development cost
-- Requires developer for major changes
-- Steeper learning curve for editors (initially)
+**Alternative: Newt** 🥈
+- ✅ より低コスト（月¥2,000〜）
+- ✅ GraphQL対応
+- ✅ 高度なワークフロー機能
+- ✅ App拡張で柔軟にカスタマイズ可能
 
-**Total Setup Cost Estimate:** ¥500,000 - ¥1,500,000 (one-time)
-**Monthly Operating Cost:** ¥3,000 - ¥8,000
+**詳細比較:** [`docs/CMS_COMPARISON.md`](docs/CMS_COMPARISON.md) 参照
+
+**Total Setup Cost Estimate:** ¥300,000 - ¥800,000 (one-time)
+**Monthly Operating Cost:** 
+- microCMS Team: ¥4,980/月
+- Newt Basic: ¥2,000/月（より安価）
+- Vercel: ¥0〜2,400/月
+- **合計: ¥2,000〜7,380/月**
 
 ---
 
