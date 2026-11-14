@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シオンとの架け橋 | トップページ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1a2b4a;
+            --accent-blue: #4a9fd8;
+            --light-blue: #e8f4f8;
+            --coral: #ff6b6b;
+            --gold: #d4a574;
+            --text-dark: #2c3e50;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Logo Header */
+        .logo-header {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-blue) 100%);
+            padding: 1.2rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .logo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            margin-top: 0.2rem;
+            font-weight: 300;
+        }
+
+        .version-toggle {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .version-toggle:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Announcements Section */
+        .announcements {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #2d4a7c 100%);
+            padding: 3rem 2rem;
+            color: white;
+        }
+
+        .announcement-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .announcement-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(8px);
+        }
+
+        .announcement-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        .announcement-item p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .announcement-item a {
+            color: var(--coral);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .announcement-item a:hover {
+            gap: 0.8rem;
+        }
+
+        /* Newsletter Banner */
+        .newsletter-banner {
+            background: var(--light-blue);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .newsletter-banner h3 {
+            font-size: 1.6rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .newsletter-banner p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.8;
+        }
+
+        .subscriber-count {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .subscribe-button {
+            display: inline-block;
+            background: var(--coral);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .subscribe-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 4rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .info-button {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 2rem auto;
+            display: block;
+            width: fit-content;
+            box-shadow: 0 4px 20px rgba(74, 159, 216, 0.3);
+        }
+
+        .info-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(74, 159, 216, 0.4);
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--coral));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px rgba(0,0,0,0.12);
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .card-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-link {
+            display: inline-block;
+            background: var(--coral);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .card-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        /* AMF Section */
+        .amf-section {
+            background: linear-gradient(135deg, var(--gold) 0%, #c49563 100%);
+            padding: 4rem 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .amf-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .amf-section p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-text h1 {
+                font-size: 1.1rem;
+            }
+
+            .announcement-item h3 {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo Header -->
+    <header class="logo-header">
+        <div class="logo-container">
+            <a href="index-original.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"></path>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>シオンとの架け橋</h1>
+                    <p>A Bridge between Zion and Japan</p>
+                </div>
+            </a>
+            <a href="index-modern.html" class="version-toggle">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                モダン版を見る
+            </a>
+        </div>
+    </header>
+
+    <!-- Announcements -->
+    <section class="announcements">
+        <div class="container">
+            <div class="announcement-item">
+                <h3>２０２６ アジア・メシアニック・フォーラムは １１月７日（土）大阪開催！</h3>
+                <a href="#">詳しくはこちら →</a>
+            </div>
+            <div class="announcement-item">
+                <h3>●ＡＭＦに続いてユダ・バハナ師来日セミナー：１１月１２日（木）名古屋、１４日（土）東京</h3>
+            </div>
+            <div class="announcement-item">
+                <h3>●ユダヤ人の聖書の学び「パラシャット・シャブア」の毎週の学びを公開しています。</h3>
+            </div>
+            <div class="announcement-item">
+                <h3>架け橋ビデオを公開しています。全てのDVDの動画も公開しています。</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Banner -->
+    <section class="newsletter-banner">
+        <div class="container">
+            <span class="subscriber-count">2,000人以上が購読中</span>
+            <h3>シオンとの架け橋では、イスラエルメールマガジンを無料メールマガジンで配信中です。</h3>
+            <p>シオンとの架け橋では、イスラエルの現地メディアから取材した情報を、週２回の無料メールマガジンで配信中です。イスラエル・中東和平に興味をお持なら、ぜひ今すぐご登録下さい！</p>
+            <a href="#" class="subscribe-button">詳しくはこちらへ</a>
+        </div>
+    </section>
+
+    <!-- YouTube Videos -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">イスラエル・ニュース YouTube配信中！</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/JMOkQ8ZGtCI" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/sNnZ3VaJGD8" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Course Banner -->
+    <section class="info-section">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">ご自宅で気軽に学べる オンライン聖書講座</h2>
+            <a href="#" class="info-button">詳しくはこちら</a>
+        </div>
+    </section>
+
+    <!-- ISRAEL NOW Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">ISRAEL NOW!</h2>
+            <p style="text-align: center; color: var(--text-light); max-width: 800px; margin: 0 auto 3rem;">「ISRAEL NOW!」は「イスラエルメールマガジン」に替わる週2回メールで配信する イスラエル関連時事ニュースです。</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#" class="info-button" style="margin: 0;">バックナンバー2023年～</a>
+                <a href="#" class="info-button" style="margin: 0; background: var(--coral);">メールでの購読申込</a>
+                <a href="#" class="info-button" style="margin: 0;">バックナンバー～2022年</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <section class="info-section">
+        <div class="container">
+            <h2 class="section-title">シオンとの架け橋のコンテンツ</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1564246603-4f0c96b02f3f?w=600&q=80" alt="イスラエルの歴史" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3 class="card-title">イスラエルについて</h3>
+                    <p class="card-description">イスラエル民族の歴史が書かれてる聖書は、最も多くの言語に翻訳され世界中で親しまれています。歴史を通じて現在に至るまで、詳しくイスラエル民族の歩みを解説しています。</p>
+                    <a href="#" class="card-link">イスラエルについてのページへ</a>
+                </div>
+                <div class="content-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?w=600&q=80" alt="バラガン・コラム" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3 class="card-title">バラガン・コラム</h3>
+                    <p class="card-description">バラガンとはヘブライ語のスラングで、「ごちゃごちゃ、散らかった」という意味があります。イスラエル在住のスタッフが、いろいろな現地の情報をお届けしています。</p>
+                    <a href="#" class="card-link">バラガン・コラム イスラエルあれこれ</a>
+                </div>
+                <div class="content-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1574267432644-f74bc6cad9d5?w=600&q=80" alt="アジア・メシアニック・フォーラム" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3 class="card-title">アジア・メシアニック・フォーラム</h3>
+                    <p class="card-description">2021年夏に開催されたAMF2021インド大会（オンライン開催）のビデオを公開中です。</p>
+                    <a href="#" class="card-link">動画サイトのページへ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMF Banner -->
+    <section class="amf-section">
+        <div class="container">
+            <h2>アジア・メシアニック・フォーラム</h2>
+            <p>2021年夏に開催されたAMF2021インド大会（オンライン開催）のビデオを公開中です。</p>
+        </div>
+    </section>
+
+    <!-- Testimony Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">証言ビデオ：イスラエルへの祈り～時を越えて</h2>
+            <p style="text-align: center; color: var(--text-light); max-width: 800px; margin: 0 auto 3rem;">イスラエル建国を誰も信じなかった昭和初年の祈りの運動を知る人達の貴重な証言ビデオです。</p>
+        </div>
+    </section>
+
+</body>
+</html>
