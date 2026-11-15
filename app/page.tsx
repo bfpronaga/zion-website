@@ -135,22 +135,15 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="event-banner">
-            <div className="event-date">
-              <div className="event-month">November</div>
-              <div className="event-day">12-14</div>
-              <div className="event-year">2026</div>
-            </div>
-            <div className="event-details">
-              <h3>ユダ・バハナ師来日セミナー</h3>
-              <p>
-                11月12日（木）名古屋、14日（土）東京にて開催。イスラエルから直接届く、深い洞察に満ちた教えをお楽しみください。
-              </p>
-              <a href="#" className="event-link" onClick={handleClick}>
-                詳細を見る
-                <span>→</span>
-              </a>
-            </div>
+          <div className="event-banner-image">
+            <Image
+              src="/images/seminar-yosef-shulam-2026.jpg"
+              alt="2026 ヨセフ・シュラム師 来日セミナー"
+              width={1200}
+              height={600}
+              className="event-image"
+              style={{ objectFit: 'cover', borderRadius: '16px' }}
+            />
           </div>
         </div>
       </section>
