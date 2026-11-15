@@ -15,11 +15,13 @@ export default function Home() {
       <header className="logo-header">
         <div className="logo-container">
           <Link href="/" className="logo">
-            <div className="logo-icon">🌉</div>
-            <div className="logo-text">
-              <h1>シオンとの架け橋</h1>
-              <p>A Bridge between Zion and Japan</p>
-            </div>
+            <Image
+              src="/images/logo-header.png"
+              alt="シオンとの架け橋 | A Bridge between Zion and Japan"
+              width={340}
+              height={55}
+              priority
+            />
           </Link>
         </div>
       </header>
