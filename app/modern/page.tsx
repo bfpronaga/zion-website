@@ -58,7 +58,7 @@ export default function ModernPage() {
           <div className="hero-visual">
             <div className="hero-image-container">
               <Image
-                src="https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80"
+                src="/images/hero-jerusalem.jpg"
                 alt="エルサレム旧市街"
                 fill
                 className="hero-image"

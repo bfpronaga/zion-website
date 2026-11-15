@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
@@ -18,6 +23,9 @@ export const metadata: Metadata = {
   title: "シオンとの架け橋 | A Bridge between Zion and Japan",
   description: "イスラエルの現地メディアから取材した最新情報を、週2回の無料メールマガジンで配信しています。4000年の歴史、文化、そして今を知る旅へようこそ。",
   keywords: ["イスラエル", "イスラエルニュース", "メシアニック", "ユダヤ人", "israel", "聖書", "イエス", "キリスト"],
+  icons: {
+    icon: '/images/favicon.ico',
+  },
 };
 
 export default function RootLayout({
