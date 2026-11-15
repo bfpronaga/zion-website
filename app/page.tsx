@@ -69,15 +69,17 @@ export default function Home() {
             </a>
           </div>
           <div className="hero-visual">
-            <div className="hero-image-container">
+            <div className="hero-image-container arch-frame">
               <Image
-                src="/images/hero-jerusalem.jpg"
-                alt="エルサレム旧市街"
+                src="/images/western-wall-prayer.jpg"
+                alt="嘆きの壁"
                 fill
                 className="hero-image"
                 priority
+                style={{ objectPosition: 'center center' }}
               />
               <div className="image-overlay"></div>
+              <div className="arch-mask"></div>
             </div>
           </div>
         </div>

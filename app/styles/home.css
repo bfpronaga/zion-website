@@ -175,6 +175,29 @@
   animation: fadeInScale 1s ease-out 0.6s forwards;
 }
 
+/* Arch Frame Effect - Like looking through a lens into Israel */
+.hero-image-container.arch-frame {
+  border-radius: 50% 50% 24px 24px;
+  clip-path: ellipse(50% 55% at 50% 45%);
+  box-shadow: 
+    inset 0 10px 30px rgba(0, 0, 0, 0.4),
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.arch-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  border: 8px solid rgba(139, 115, 85, 0.3);
+  border-radius: 50% 50% 24px 24px;
+  box-shadow: 
+    inset 0 0 40px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(139, 115, 85, 0.2);
+}
+
 .hero-image {
   width: 100%;
   height: 100%;
@@ -187,7 +210,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 43, 74, 0.3) 0%, rgba(74, 159, 216, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(26, 43, 74, 0.2) 0%, rgba(74, 159, 216, 0.15) 100%);
+  mix-blend-mode: multiply;
 }
 
 @keyframes fadeInUp {
@@ -599,6 +623,10 @@ section {
   .hero-visual {
     height: 300px;
     order: -1;
+  }
+
+  .hero-image-container.arch-frame {
+    clip-path: ellipse(50% 60% at 50% 40%);
   }
 
   .hero-title-animated {
