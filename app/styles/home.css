@@ -35,16 +35,17 @@
 .header-cta {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
+  gap: 0.8rem;
+  max-width: 700px;
 }
 
 .header-cta-text {
   color: white;
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.88rem;
+  line-height: 1.5;
   margin: 0;
   opacity: 0.95;
+  letter-spacing: -0.01em;
 }
 
 .header-cta-button {
@@ -78,6 +79,12 @@
 
   .header-cta {
     width: 100%;
+    max-width: 100%;
+  }
+
+  .header-cta-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .header-cta-button {
@@ -659,12 +666,41 @@ section {
     padding: 2rem;
   }
 
+  .event-banner-image {
+    margin-bottom: 1.5rem;
+  }
+
+  .event-image {
+    border-radius: 12px;
+  }
+
   .newsletter-form {
     flex-direction: column;
   }
 
   .newsletter-input {
     min-width: 100%;
+  }
+
+  .newsletter-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .content-cards {
+    gap: 1.5rem;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+
+  .hero {
+    padding: 7rem 1.5rem 2.5rem 1.5rem;
   }
 
   .logo-text h1 {
@@ -679,6 +715,10 @@ section {
   .footer-contact {
     margin-bottom: 1.5rem;
   }
+
+  .site-footer {
+    padding: 3rem 0 0;
+  }
 }
 
 /* Tablet Responsive - 2 columns */
@@ -686,6 +726,83 @@ section {
   .footer-nav-columns {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+}
+
+/* Mobile Small - Extra adjustments for small phones */
+@media (max-width: 480px) {
+  .logo-header {
+    padding: 1rem 0;
+  }
+
+  .logo img {
+    width: 260px;
+    height: auto;
+  }
+
+  .header-cta-text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .header-cta-button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .hero-title-animated {
+    font-size: 1.8rem;
+  }
+
+  .hero-desc-animated {
+    font-size: 0.95rem;
+  }
+
+  .hero-stats {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.9rem 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .event-banner,
+  .event-banner-image {
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .footer-address p {
+    font-size: 0.85rem;
+  }
+
+  .footer-nav-title {
+    font-size: 0.9rem;
+  }
+
+  .footer-nav-list a {
+    font-size: 0.8rem;
   }
 }
 
