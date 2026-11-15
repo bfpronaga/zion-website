@@ -23,6 +23,15 @@ export default function Home() {
               priority
             />
           </Link>
+          <div className="header-cta">
+            <p className="header-cta-text">
+              シオンとの架け橋では、イスラエルの現地メディアから取材した情報を、週２回の無料メールマガジンで配信中です。
+              イスラエル・中東和平に興味をお持なら、ぜひ今すぐご登録下さい！
+            </p>
+            <a href="#newsletter" className="header-cta-button">
+              詳しくはこちらへ
+            </a>
+          </div>
         </div>
       </header>
 
