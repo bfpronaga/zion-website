@@ -1,20 +1,25 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import YouTubeGrid from '@/app/components/YouTubeGrid';
 import './styles/home.css';
 
-export const metadata = {
-  title: 'シオンとの架け橋 | A Bridge between Zion and Japan',
-  description: 'イスラエルの現地メディアから取材した最新情報を、週2回の無料メールマガジンで配信しています。4000年の歴史、文化、そして今を知る旅へようこそ。',
-};
-
 export default function Home() {
+  // Prevent all link clicks and form submissions for mock demo
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
   return (
     <div>
       {/* Logo Header */}
       <header className="logo-header">
         <div className="logo-container">
-          <Link href="/" className="logo">
+          <Link href="/" className="logo" onClick={handleClick}>
             <Image
               src="/images/logo-header.png"
               alt="シオンとの架け橋 | A Bridge between Zion and Japan"
@@ -28,7 +33,7 @@ export default function Home() {
               シオンとの架け橋では、イスラエルの現地メディアから取材した情報を、週２回の無料メールマガジンで配信中です。
               イスラエル・中東和平に興味をお持なら、ぜひ今すぐご登録下さい！
             </p>
-            <a href="#newsletter" className="header-cta-button">
+            <a href="#newsletter" className="header-cta-button" onClick={handleClick}>
               詳しくはこちらへ
             </a>
           </div>
@@ -55,7 +60,7 @@ export default function Home() {
                 <div className="stat-label">活動実績</div>
               </div>
             </div>
-            <a href="#newsletter" className="cta-button cta-animated">
+            <a href="#newsletter" className="cta-button cta-animated" onClick={handleClick}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
@@ -124,7 +129,7 @@ export default function Home() {
               <p>
                 2026年11月7日（土）大阪にて開催！イスラエルと信仰について、アジア各国から集まった参加者と共に学び、交流する貴重な機会です。
               </p>
-              <a href="#" className="event-link">
+              <a href="#" className="event-link" onClick={handleClick}>
                 詳細を見る
                 <span>→</span>
               </a>
@@ -141,7 +146,7 @@ export default function Home() {
               <p>
                 11月12日（木）名古屋、14日（土）東京にて開催。イスラエルから直接届く、深い洞察に満ちた教えをお楽しみください。
               </p>
-              <a href="#" className="event-link">
+              <a href="#" className="event-link" onClick={handleClick}>
                 詳細を見る
                 <span>→</span>
               </a>
@@ -170,7 +175,7 @@ export default function Home() {
               <p className="card-description">
                 週2回配信のメールマガジン。イスラエルの現地メディアから厳選した最新ニュースを日本語で。バックナンバーもご覧いただけます。
               </p>
-              <a href="#" className="card-link">
+              <a href="#" className="card-link" onClick={handleClick}>
                 詳しく見る
                 <span>→</span>
               </a>
@@ -186,7 +191,7 @@ export default function Home() {
               <p className="card-description">
                 証言ビデオ「イスラエルへの祈り～時を越えて」をはじめ、すべてのDVD動画をオンラインで公開。貴重な歴史的証言をご覧ください。
               </p>
-              <a href="#" className="card-link">
+              <a href="#" className="card-link" onClick={handleClick}>
                 動画を見る
                 <span>→</span>
               </a>
@@ -202,7 +207,7 @@ export default function Home() {
               <p className="card-description">
                 4000年の歴史、宗教、文化、そして現代のイスラエル。聖書の民から建国、和平プロセスまで、詳しく解説しています。
               </p>
-              <a href="#" className="card-link">
+              <a href="#" className="card-link" onClick={handleClick}>
                 学ぶ
                 <span>→</span>
               </a>
@@ -223,7 +228,7 @@ export default function Home() {
               <br />
               イスラエル・中東和平に興味をお持ちなら、ぜひ今すぐご登録ください！
             </p>
-            <form className="newsletter-form">
+            <form className="newsletter-form" onSubmit={handleSubmit}>
               <input
                 type="email"
                 className="newsletter-input"
@@ -258,7 +263,7 @@ export default function Home() {
               <p className="card-description">
                 イスラエル在住のスタッフが現地の生の情報をお届け。「バラガン」はヘブライ語で「ごちゃごちゃ」という意味。多様なイスラエルの日常を覗いてみませんか。
               </p>
-              <a href="#" className="card-link">
+              <a href="#" className="card-link" onClick={handleClick}>
                 コラムを読む
                 <span>→</span>
               </a>
@@ -274,7 +279,7 @@ export default function Home() {
               <p className="card-description">
                 ユダヤ人の聖書の学び「パラシャット・シャブア」の毎週の学びを公開中。古代から続く伝統的な学びの方法を体験できます。
               </p>
-              <a href="#" className="card-link">
+              <a href="#" className="card-link" onClick={handleClick}>
                 学びを始める
                 <span>→</span>
               </a>
@@ -290,7 +295,7 @@ export default function Home() {
               <p className="card-description">
                 ご自宅で気軽に学べるオンライン聖書講座を開講中。イスラエルの歴史と文化を、聖書を通して深く理解できます。
               </p>
-              <a href="#" className="card-link">
+              <a href="#" className="card-link" onClick={handleClick}>
                 講座を見る
                 <span>→</span>
               </a>
