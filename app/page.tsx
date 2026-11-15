@@ -69,7 +69,7 @@ export default function Home() {
             </a>
           </div>
           <div className="hero-visual">
-            <div className="hero-image-container arch-frame">
+            <div className="hero-image-container">
               <Image
                 src="/images/western-wall-prayer.jpg"
                 alt="嘆きの壁"
@@ -78,8 +78,7 @@ export default function Home() {
                 priority
                 style={{ objectPosition: 'center center' }}
               />
-              <div className="image-overlay"></div>
-              <div className="arch-mask"></div>
+              <div className="image-gradient-overlay"></div>
             </div>
           </div>
         </div>

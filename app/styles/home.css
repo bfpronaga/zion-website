@@ -175,34 +175,11 @@
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
   opacity: 0;
   animation: fadeInScale 1s ease-out 0.6s forwards;
-}
-
-/* Arch Frame Effect - Like looking through a lens into Israel */
-.hero-image-container.arch-frame {
-  border-radius: 50% 50% 24px 24px;
-  clip-path: ellipse(50% 55% at 50% 45%);
-  box-shadow: 
-    inset 0 10px 30px rgba(0, 0, 0, 0.4),
-    0 25px 70px rgba(0, 0, 0, 0.4);
-}
-
-.arch-mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  border: 8px solid rgba(139, 115, 85, 0.3);
-  border-radius: 50% 50% 24px 24px;
-  box-shadow: 
-    inset 0 0 40px rgba(0, 0, 0, 0.5),
-    0 0 30px rgba(139, 115, 85, 0.2);
 }
 
 .hero-image {
@@ -211,14 +188,22 @@
   object-fit: cover;
 }
 
-.image-overlay {
+/* Gradient overlay that blends from hero background color into image */
+.image-gradient-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 43, 74, 0.2) 0%, rgba(74, 159, 216, 0.15) 100%);
-  mix-blend-mode: multiply;
+  background: linear-gradient(
+    90deg,
+    var(--primary-blue) 0%,
+    rgba(26, 43, 74, 0.7) 15%,
+    rgba(26, 43, 74, 0.3) 35%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 @keyframes fadeInUp {
@@ -632,8 +617,17 @@ section {
     order: -1;
   }
 
-  .hero-image-container.arch-frame {
-    clip-path: ellipse(50% 60% at 50% 40%);
+  .hero-image-container {
+    border-radius: 16px;
+  }
+
+  .image-gradient-overlay {
+    background: linear-gradient(
+      180deg,
+      var(--primary-blue) 0%,
+      rgba(26, 43, 74, 0.5) 20%,
+      transparent 50%
+    );
   }
 
   .hero-title-animated {
