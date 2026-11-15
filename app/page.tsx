@@ -319,20 +319,13 @@ export default function Home() {
                 <li><a href="#" onClick={handleClick}>バックナンバー2023年～</a></li>
                 <li><a href="#" onClick={handleClick}>バックナンバー～2022年</a></li>
               </ul>
-              <h4 className="footer-nav-title" style={{ marginTop: '1.5rem' }}>予備知識</h4>
+              <h4 className="footer-nav-title" style={{ marginTop: '1rem' }}>予備知識</h4>
               <ul className="footer-nav-list">
                 <li><a href="#" onClick={handleClick}>知っておくと便利な予備知識</a></li>
                 <li><a href="#" onClick={handleClick}>イスラエルの国会・クネセト</a></li>
                 <li><a href="#" onClick={handleClick}>ニュースによく出る政党</a></li>
                 <li><a href="#" onClick={handleClick}>政治と宗教のややこしい関係</a></li>
                 <li><a href="#" onClick={handleClick}>ニュース用語</a></li>
-              </ul>
-              <h4 className="footer-nav-title" style={{ marginTop: '1.5rem' }}>バラガン・コラム　最新記事</h4>
-              <ul className="footer-nav-list">
-                <li><a href="#" onClick={handleClick}>コロナ渦中のホロコースト追悼日</a></li>
-                <li><a href="#" onClick={handleClick}>ホロコーストとジョーク？！</a></li>
-                <li><a href="#" onClick={handleClick}>イスラエルでも好評、ホロコースト・コメディ「ジョジョ・ラビット」</a></li>
-                <li><a href="#" onClick={handleClick}>再々総選挙とネタニヤフ免責問題</a></li>
               </ul>
             </div>
 
@@ -349,12 +342,16 @@ export default function Home() {
                 <li><a href="#" onClick={handleClick}>ガザ対イスラエル</a></li>
                 <li><a href="#" onClick={handleClick}>イスラエルと近隣諸国</a></li>
               </ul>
-              <h4 className="footer-nav-title" style={{ marginTop: '1.5rem' }}>イスラエルの宗教事情</h4>
+              <h4 className="footer-nav-title" style={{ marginTop: '1rem' }}>イスラエルの宗教事情</h4>
               <ul className="footer-nav-list">
                 <li><a href="#" onClick={handleClick}>イスラエルの宗教モザイク</a></li>
                 <li><a href="#" onClick={handleClick}>キリスト教とユダヤ教</a></li>
               </ul>
-              <h4 className="footer-nav-title" style={{ marginTop: '1.5rem' }}>ユダヤの文化</h4>
+            </div>
+
+            {/* Column 3 */}
+            <div className="footer-nav-column">
+              <h4 className="footer-nav-title">ユダヤの文化</h4>
               <ul className="footer-nav-list">
                 <li><a href="#" onClick={handleClick}>ユダヤ歴</a></li>
                 <li><a href="#" onClick={handleClick}>祭りと祭日</a></li>
@@ -362,39 +359,33 @@ export default function Home() {
                 <li><a href="#" onClick={handleClick}>コシャー（食物規定）</a></li>
                 <li><a href="#" onClick={handleClick}>イスラエルで大人気、日本食?</a></li>
               </ul>
+              <h4 className="footer-nav-title" style={{ marginTop: '1rem' }}>バラガン・コラム　最新記事</h4>
+              <ul className="footer-nav-list">
+                <li><a href="#" onClick={handleClick}>コロナ渦中のホロコースト追悼日</a></li>
+                <li><a href="#" onClick={handleClick}>ホロコーストとジョーク？！</a></li>
+                <li><a href="#" onClick={handleClick}>イスラエルでも好評、ホロコースト・コメディ「ジョジョ・ラビット」</a></li>
+                <li><a href="#" onClick={handleClick}>再々総選挙とネタニヤフ免責問題</a></li>
+              </ul>
             </div>
 
-            {/* Column 3 */}
+            {/* Column 4 */}
             <div className="footer-nav-column">
               <h4 className="footer-nav-title">シオンとの架け橋出版部</h4>
               <div className="footer-video-section">
-                <div className="footer-video-thumbnail">
-                  <Image
-                    src="/images/video-testimony-thumbnail.jpg"
-                    alt="証言ビデオ"
-                    width={200}
-                    height={150}
-                    className="footer-video-image"
-                    onError={(e) => {
-                      // Fallback if image doesn't exist
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                </div>
                 <h5 className="footer-video-title">証言ビデオ：イスラエルへの祈り～時を越えて</h5>
                 <p className="footer-video-desc">
                   イスラエル建国を誰も信じなかった昭和初年の祈りの運動を知る人達の貴重な証言ビデオです。
                 </p>
               </div>
-              <h4 className="footer-nav-title" style={{ marginTop: '1.5rem' }}>架け橋ビデオ</h4>
+              <h4 className="footer-nav-title" style={{ marginTop: '1rem' }}>架け橋ビデオ</h4>
               <ul className="footer-nav-list">
                 <li><a href="#" onClick={handleClick}>架け橋ビデオ</a></li>
               </ul>
-              <h4 className="footer-nav-title" style={{ marginTop: '1.5rem' }}>リンク集</h4>
+              <h4 className="footer-nav-title" style={{ marginTop: '1rem' }}>リンク集</h4>
               <ul className="footer-nav-list">
                 <li><a href="#" onClick={handleClick}>リンク集</a></li>
               </ul>
-              <h4 className="footer-nav-title" style={{ marginTop: '1.5rem' }}>その他</h4>
+              <h4 className="footer-nav-title" style={{ marginTop: '1rem' }}>その他</h4>
               <ul className="footer-nav-list">
                 <li><a href="#" onClick={handleClick}>イスラエルの産業</a></li>
                 <li><a href="#" onClick={handleClick}>ガリラヤ湖とガリラヤ地方</a></li>
