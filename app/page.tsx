@@ -118,22 +118,16 @@ export default function Home() {
               定期的に開催されるセミナーやフォーラムで、イスラエルについてより深く学べます。
             </p>
           </div>
-          <div className="event-banner">
-            <div className="event-date">
-              <div className="event-month">November</div>
-              <div className="event-day">07</div>
-              <div className="event-year">2026</div>
-            </div>
-            <div className="event-details">
-              <h3>アジア・メシアニック・フォーラム</h3>
-              <p>
-                2026年11月7日（土）大阪にて開催！イスラエルと信仰について、アジア各国から集まった参加者と共に学び、交流する貴重な機会です。
-              </p>
-              <a href="#" className="event-link" onClick={handleClick}>
-                詳細を見る
-                <span>→</span>
-              </a>
-            </div>
+          <div className="event-banner-image">
+            <Image
+              src="/images/asia-messianic-forum-2026.gif"
+              alt="アジア・メシアニック・フォーラム 2026"
+              width={1200}
+              height={300}
+              className="event-image"
+              style={{ objectFit: 'contain', borderRadius: '16px' }}
+              unoptimized
+            />
           </div>
           <div className="event-banner-image">
             <Image
