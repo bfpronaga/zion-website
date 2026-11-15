@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import YouTubeGrid from '@/app/components/YouTubeGrid';
 import '../modern/modern.css'; // Reuse styling
 
 export const metadata = {
@@ -90,34 +91,12 @@ export default function OriginalPage() {
           <div className="section-header">
             <h2 className="section-title">イスラエル・ニュース　YouTube配信中！</h2>
           </div>
-          <div className="video-grid">
-            <div className="video-card">
-              <div className="video-wrapper">
-                <iframe
-                  width="336"
-                  height="189"
-                  src="https://www.youtube.com/embed/G_aHzZN_XUI"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-            <div className="video-card">
-              <div className="video-wrapper">
-                <iframe
-                  width="336"
-                  height="189"
-                  src="https://www.youtube.com/embed/HV-nNBbfW_g"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
+          <YouTubeGrid
+            videos={[
+              { id: 'G_aHzZN_XUI' },
+              { id: 'HV-nNBbfW_g' },
+            ]}
+          />
         </div>
       </section>
 

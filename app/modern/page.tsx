@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import YouTubeGrid from '@/app/components/YouTubeGrid';
 import './modern.css';
 
 export const metadata = {
@@ -79,38 +80,20 @@ export default function ModernPage() {
               最新のイスラエル情勢や歴史、文化について、動画でわかりやすく解説しています。
             </p>
           </div>
-          <div className="video-grid">
-            <div className="video-card">
-              <div className="video-wrapper">
-                <iframe
-                  src="https://www.youtube.com/embed/JMOkQ8ZGtCI"
-                  title="YouTube video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="video-info">
-                <span className="video-badge">NEW</span>
-                <h3 className="video-title">レバノンでイスラエル─神の中東の平和</h3>
-              </div>
-            </div>
-            <div className="video-card">
-              <div className="video-wrapper">
-                <iframe
-                  src="https://www.youtube.com/embed/sNnZ3VaJGD8"
-                  title="YouTube video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="video-info">
-                <span className="video-badge">教育コンテンツ</span>
-                <h3 className="video-title">なぜどこは破壊され、シメオンは？</h3>
-              </div>
-            </div>
-          </div>
+          <YouTubeGrid
+            videos={[
+              {
+                id: 'JMOkQ8ZGtCI',
+                title: 'レバノンでイスラエル─神の中東の平和',
+                badge: 'NEW',
+              },
+              {
+                id: 'sNnZ3VaJGD8',
+                title: 'なぜどこは破壊され、シメオンは？',
+                badge: '教育コンテンツ',
+              },
+            ]}
+          />
         </div>
       </section>
 
