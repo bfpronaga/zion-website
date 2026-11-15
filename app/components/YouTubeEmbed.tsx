@@ -127,16 +127,18 @@ export default function YouTubeEmbed({
           // Embedded iframe (after clicking play)
           <iframe
             src={embedUrl}
-            title={title || 'YouTube video'}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            title={title || 'YouTube video player'}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
+            loading="lazy"
             style={{
               position: 'absolute',
               top: 0,
               left: 0,
               width: '100%',
               height: '100%',
+              border: 0,
             }}
           />
         )}
