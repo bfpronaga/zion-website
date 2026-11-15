@@ -148,6 +148,7 @@ export default function YouTubeEmbed({
               target="_blank"
               rel="noopener noreferrer"
               className="video-link"
+              onClick={(e) => e.preventDefault()}
               style={{
                 fontSize: '0.85rem',
                 color: 'var(--accent-blue)',
