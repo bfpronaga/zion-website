@@ -1,8 +1,13 @@
-/* Logo Header */
+/* Logo Header - Overlay style */
 .logo-header {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-blue) 100%);
-  padding: 1.2rem 0;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.5rem 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  backdrop-filter: blur(8px);
 }
 
 .logo-container {
@@ -84,7 +89,7 @@
 .hero {
   background: var(--primary-blue);
   color: white;
-  padding: 3rem 2rem;
+  padding: 8rem 2rem 3rem 2rem;
   position: relative;
   overflow: hidden;
 }
